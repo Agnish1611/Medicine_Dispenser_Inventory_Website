@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-content">
+      <div class="logo">
+        <i class="bx bx-home-alt-2"></i>
+        <div class="logo-name">Inventory</div> 
+      </div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="#">
+          <i class="bx bx-grid-alt"></i>
+          <span class="links-name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span> 
+      </li>
+      <li>
+        <a href="../items_page/index.html">
+          <i class='bx bxs-layer'></i>
+          <span class="links-name">Items</span>
+        </a>
+        <span class="tooltip">Items</span> 
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bxs-package' ></i>
+          <span class="links-name">Orders</span>
+        </a>
+        <span class="tooltip">Orders</span> 
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-line-chart' ></i>
+          <span class="links-name">Chart</span>
+        </a>
+        <span class="tooltip">Chart</span> 
+      </li>
+    </ul>
+    <a href="../login_page/index.html">
+        <i class="bx bx-log-out" id="log-out"></i>
+    </a>
+  </div>
+
+  <div class="home-content">
+    
+
+    <!-- <nav class="bg-secondary.bg-gradient">
+      <div class="container d-flex flex-wrap">
+        <ul class="nav me-auto">
+          <li class="nav-item"><a href="#" class="nav-link link-light px-2 active" aria-current="page">Dashboard</a></li>
+          <li class="nav-item"><a href="#" class="nav-link link-light px-2">Items</a></li>
+          <li class="nav-item"><a href="#" class="nav-link link-light px-2">Orders</a></li>
+          <li class="nav-item"><a href="#" class="nav-link link-light px-2">Chart</a></li>
+        </ul>
+      </div>
+    </nav> -->
+
+    <div class="sales-activity">
+
+      <h2 class="sales-activity-title">Sales Activity</h2>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">0000</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Qty</h6>
+          <p class="card-text">Left</p>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">0000</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Qty</h6>
+          <p class="card-text">Sold</p>
+        </div>
+      </div>
+        
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">0000</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Pkgs</h6>
+          <p class="card-text">To be delivered</p>
+        </div>
+      </div>
+
+    </div>
+    
+    <h2 class="product-details-title">Product Details</h2>
+    <div class="product-details">
+      <div class="product-items">
+        <div class="low-stock-items">
+          <span class="low-stock-items-title">Low Stock Items</span>
+          <span class="low-stock-items-number">00</span>
+        </div>
+        <div class="all-items">
+          <span class="all-items-title">All Items</span>
+          <span class="all-items-number">00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="donut-chart">
+      <canvas id="donutChart" style="min-width:00px;width:100%;max-width:500px;height:400px"></canvas>
+    </div>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

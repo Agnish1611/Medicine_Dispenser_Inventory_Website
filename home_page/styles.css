@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.nav-list{
+    padding-left: 0;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: #183856;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active{
+    width: 240px;
+}
+
+.sidebar .logo-content .logo{
+    color: #fff;
+    display: flex;
+    margin-left: 10px;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.active .logo-content .logo{
+    opacity: 1;
+    pointer-events: none; 
+}
+
+.logo-content .logo i{
+    font-size: 28px;
+    margin-right: 15px;
+}
+
+.logo-content .logo .logo-name{
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.sidebar #btn{
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translate(-50%);
+}
+
+.sidebar.active #btn{
+    left: 90%;
+}
+
+.sidebar ul{
+    margin-top: 20px;
+}
+
+.sidebar ul li{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+}
+
+.sidebar ul li .tooltip{
+    position: absolute;
+    left: 80px;
+    top: 0;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    height: 35px;
+    width: 122px;
+    background: #fff;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+
+.sidebar.active ul li .tooltip{
+    display: none;
+}
+
+.sidebar ul li:hover .tooltip{
+    transition: all 0.5s ease;
+    opacity: 1;
+    top: 50%;
+}
+
+.sidebar ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.sidebar ul li a:hover{
+    color: #11101d;
+    background: #fff;
+}
+
+.sidebar ul li a i{
+    margin-left: 14px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+.sidebar .links-name{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.active .links-name{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#log-out{
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translate(-50%);
+    color: #fff;
+    border-radius: 12px;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.home-content{
+    z-index: -1;
+    position: absolute;
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    left: 128px;
+    transition: all 0.5s ease;
+}
+
+.home-content.active{
+    left: 240px;
+}
+
+nav{
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    background: #3e5a74 !important;
+}
+
+nav .container{
+    margin-left: 0;
+    width: 1100px !important;
+}
+
+nav .container .nav-item{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.sales-activity{
+    position: absolute;
+    height: 300px;
+    margin: 50px 0 50px 0; 
+}
+
+.sales-activity-title{
+    margin: 20px;
+    font-size: 30px;
+    color: #2D4459;
+}
+
+.card{
+    display: inline-flex;
+    max-width: 200px;
+    margin: 20px;
+    text-align: center;
+    background-color: #dad3ed;
+    box-shadow: 2px 4px 4px 2px rgb(192, 195, 196);
+    border: 0;
+}
+
+.card .card-title{
+    font-size: 30px;
+    font-weight: 500;
+    color: #4E433B;
+}
+
+.card .card-subtitle{
+    font-size: 12px;
+    padding-bottom: 20px;
+    color: #74563B;
+}
+
+.card .card-text{
+    color: #2D4459;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.product-details{
+    position: absolute;
+    display: inline-flex;
+    margin-left: 20px;
+    top: 60%;
+    border-radius: 10px;
+    width: 500px;
+    height: 150px;
+    background-color: #dad3ed;
+    box-shadow: 2px 4px 4px 2px rgb(192, 195, 196);
+}
+
+h2.product-details-title{
+    position: absolute;
+    top: 50%;
+    margin-left: 20px;
+    color: #2D4459;
+}
+
+.product-items{
+    display: relative;
+    padding: 25px;
+    padding-top: 40px;
+    font-size: 20px;
+}
+
+.low-stock-items{
+    padding-bottom: 20px
+}
+
+.low-stock-items-title{
+    color: rgb(187, 104, 104);
+    font-weight: 500;
+}
+
+.low-stock-items-number{
+    padding-left: 242px;
+    color: rgb(187, 104, 104);
+    font-weight: 500;
+}
+
+.all-items-title{
+    color: rgb(90, 125, 90);
+    font-weight: 500;
+}
+
+.all-items-number{
+    padding-left: 315px;
+    color: rgb(90, 125, 90);
+    font-weight: 500;
+}
+
+.donut-chart{
+    position: absolute;
+    background-color: #fff;
+    top: 50px;
+    left: 800px;
+    margin-top: 100px;
+    border-radius: 12px;
+}
