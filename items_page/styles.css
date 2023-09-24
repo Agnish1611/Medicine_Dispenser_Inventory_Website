@@ -165,7 +165,7 @@ table{
     position: absolute;
     min-width: 800px;
     max-width: 1200px;
-    left: 98px;
+    left: 128px;
     top: 60px;
     transition: all 0.5s ease;
     margin: 50px 0 0 100px;
@@ -185,7 +185,7 @@ td{
     display: block;
     position: absolute;
     top: 48px;
-    left: 198px;
+    left: 228px;
     width: 1200px;
     margin-bottom: 10px;
     transition: all 0.5s ease;
@@ -211,4 +211,76 @@ td{
 
 .new-btn:hover{
     border: 3px solid #aec6dd;
+}
+
+.form-container{
+    position: absolute;
+    max-width: 320px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 101;
+    background: #f9b3f0;
+    padding: 30px 50px 30px 39px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+}
+
+.form-container.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.input-box{
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+}
+
+.input-box input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none !important;
+    padding: 0 10px;
+    color: #333;
+    border-bottom: 2px solid #aaaaaa;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.input-box input:focus{
+    border-color:#7d2ae8;
+}
+
+input{
+    padding-right: 0 !important;
+}
+
+.form-container .button{
+    background: #7d2ae8;
+    margin: 20px 10px 0 10px;
+    padding: 2px 7px 2px 7px;
+    border-radius: 10px;
+    color: #fff;
+    border: 0;
+}
+
+.items-list{
+    opacity: 1;
+    transition: all 0.2s ease-out;
+}
+
+.items-list.active{
+    opacity: 0.6;
+}
+
+body.active{
+    background-color: #eaecec;
 }
